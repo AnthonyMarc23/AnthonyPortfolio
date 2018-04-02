@@ -1,0 +1,41 @@
+body {
+  color: #1F1;
+  text-align: left;
+  background-image: url("terminal_1.png");
+  display: flex;
+}
+
+p {
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+.container {
+  flex-direction: row;
+}
+
+
+#name-head {
+  color: #005500;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  text-shadow:0px 0px 0px black;
+  text-align: left;
+  transition: text-shadow .5s ease-in-out, font-size .5s ease-in-out, color .5s ease-in-out;
+}
+
+#name-head:hover {
+  color: #1F1;
+  /* font-size: 50px; */
+  text-shadow: 4px 4px 6px black;
+}
+
+
+
+
