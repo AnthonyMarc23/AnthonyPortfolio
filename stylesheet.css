@@ -1,12 +1,74 @@
 body {
   color: #1F1;
   text-align: left;
-  background-image: url("terminal_1.png");
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+  margin: 0;
+}
+
+body background-image {
+  opacity: .5;
+}
+
+
+.nav_bar {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(30, 30, 30, .5);
+  font-family: "Press Start 2P";
+}
+
+ul {
+
+}
+
+ul.nav_bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /* background-color: #333; */
+}
+
+ul.nav_bar li {
+  width: 150px;
+  justify-content: center;
+}
+
+ul.nav_bar li a {
+  display: inline-block;
+  color: #005500;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: text-shadow .5s ease-in-out, color .5s ease-in-out;
+}
+
+ul.nav_bar li a:hover:not(.active) {
+  color: #1F1;
+  text-shadow: 2px 2px 3px black;
+}
+
+/* ul.nav_bar li:hover {
+  color: #1F1;
+} */
+
+ul.nav_bar li a.active {
+  background-color: rgba(76, 175, 76, 0.25);
+  color: #1F1;
+}
+
+ul.nav_bar li.right {
+
 }
 
 p {
-  font-family: 'Inconsolata', monospace;
   font-size: 18px;
 }
 
@@ -16,8 +78,7 @@ h1 {
 h2 {
 }
 
-.container {
-  flex-direction: row;
+a {
 }
 
 
@@ -26,7 +87,7 @@ h2 {
   font-family: 'Press Start 2P', monospace;
   font-size: 24px;
   text-shadow:0px 0px 0px black;
-  text-align: left;
+  text-align: center;
   transition: text-shadow .5s ease-in-out, font-size .5s ease-in-out, color .5s ease-in-out;
 }
 
@@ -36,6 +97,122 @@ h2 {
   text-shadow: 4px 4px 6px black;
 }
 
+.nav {
+  color: #1F1;
+  min-width: 100px;
+  font-family: "Press Start 2P";
+}
 
 
+.container {
+  background-image: url("terminal_1.png");
+}
 
+.site_header {
+}
+
+.main_content {
+  display: block;
+  margin: auto;
+  background-image: url("crt_monitor.png");
+  width: 600px;
+  height: 503px;
+  align-content: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 54px 58px 0px 62px;
+}
+
+img {
+  border: solid 1px #1F1;
+  border-radius: 4px;
+  box-shadow: 5px 10px #005500;
+  width: 90%;
+  min-height: 150px;
+  display: block;
+  margin: 20px 5px;
+}
+
+.screen {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 356px;
+  
+}
+
+::placeholder {
+  color: #005500;
+  font-family: "Inconsolata", monospace;
+}
+
+
+input[type=text], select {
+    width: 99%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #1F1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    color: #1F1;
+    font-family: "Inconsolata", monospace;
+}
+
+input[type=submit] {
+    width: 99%;
+    color: #1F1;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #1F1;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: "Inconsolata", monospace;
+}
+
+textarea {
+    width: 99%;
+    height: 150px;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    border: 1px solid #1F1;
+    border-radius: 4px;
+    resize: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #1F1;
+}
+
+input[type=submit]:hover {
+    background-color: #1F1;
+    color: #000;
+}
+
+  
+@keyframes cursorBlink {
+  0% { color: #005500; }
+  50% { color: #1F1; }
+  100% { color: #005500; }  
+}
+
+.cursor {
+  display: inline;
+  animation-name: cursorBlink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.extra_space {
+  height: 100px;
+
+}
+
+@media screen and (max-width: 600px){
+    ul.nav_bar li {
+      width: 100%;
+      text-align: center;
+    }
+    
+    #name-head {
+      font-size: 16px;
+}
